@@ -19,6 +19,10 @@ body {
      margin: 0;
      padding: 20px;
  }
+ .ad{
+   font-weight: bold;
+   color: #2E2EFE;
+   }
    #grid{
       display: grid;
       grid-template-columns: 150px 1fr;
@@ -40,4 +44,5 @@ body {
       border-bottom: none;
    }
  }
+
 </style>
