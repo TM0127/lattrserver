@@ -3,22 +3,39 @@
 <head>
  <title>라떼서버</title>
  <meta charset="utf-8">
+ <script>
+ function nightDayHandler(self) {
+   var target = document.querySelector('body');
+   if(self.value === 'night') {
+     target.style.backgroundColor = 'black';
+     target.style.color = 'white';
+     self.value='day';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       alist[i].style.color = '#58FAF4';
+       i = i + 1;
+    }
+   } else {
+     target.style.backgroundColor = 'white';
+     target.style.color = 'black';
+     self.value='night';
+
+     var alist = document.querySelectorAll('a');
+     var i = 0;
+     while(i < alist.length){
+       alist［i］.style.color = '#58FAF4';
+       i = i + 1;
+     }
+   }
+ }
+ </script>
  <link rel="stylesheet" href="style.css">
   </head>
   <bady>
-    <input type="button" value="밤" onclick="
-     var target = document.querySelector('body')
-     if(target.dataset.mod === '낮') {
-       target.style.backgroundColor = 'black';
-       target.style.color = 'white';
-       target.dataset.mod = '밤'
-       this.value='낮';
-     } else {
-       target.style.backgroundColor = 'white';
-       target.style.color = 'black';
-       target.dataset.mod = '낮'
-       this.value='밤';
-     }
+    <input id="night_day"type="button" value="night" onclick="
+     nightDayHandler(this);
    ">
       <h1><a href="index.html"style="color:#8000FF;">latte server</a></h1>
    <div id="grid">
